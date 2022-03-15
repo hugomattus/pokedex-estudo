@@ -1,0 +1,290 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pokedex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  padding: 30px 0;
+}
+
+.cartao-pokemon {
+  display: none;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0;
+}
+
+.cartao-pokemon.tipo-eletrico {
+  background-color: #FCC719;
+}
+
+.cartao-pokemon.tipo-fogo {
+  background-color: #ED8A8B;
+}
+
+.cartao-pokemon.tipo-agua {
+  background-color: #76befe;
+}
+
+.cartao-pokemon.tipo-grama {
+  background-color: #49d0b0;
+}
+
+.cartao-pokemon.tipo-trevas {
+  background-color: #ba68c8;
+}
+
+.cartao-pokemon.tipo-dragao {
+  background-color: #c29791;
+}
+
+.cartao-pokemon .cartao-topo {
+  padding: 30px 40px 0;
+}
+
+.cartao-pokemon .cartao-topo .nome {
+  margin-bottom: 5px;
+}
+
+.cartao-pokemon .cartao-topo .tipo {
+  font-size: 12px;
+  background-color: #FFFFFF;
+  opacity: 0.7;
+  border-radius: 10px;
+  padding: 3px 10px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0;
+}
+
+.cartao-pokemon .cartao-topo .detalhes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFFFFF;
+}
+
+.cartao-pokemon .cartao-topo .cartao-imagem {
+  width: 350px;
+  height: 350px;
+}
+
+.cartao-pokemon .cartao-topo .cartao-imagem img {
+  -webkit-animation: floating 3s infinite;
+          animation: floating 3s infinite;
+  max-height: 100%;
+}
+
+.cartao-pokemon .cartao-informacoes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #FFFFFF;
+  padding: 80px 30px 50px;
+  margin-top: -70px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.cartao-pokemon .cartao-informacoes h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #6b727a;
+}
+
+.cartao-pokemon .cartao-informacoes .status {
+  padding: 0 10px;
+  width: 180px;
+}
+
+.cartao-pokemon .cartao-informacoes .status ul li {
+  border-bottom: 1px solid #c3c4c5;
+  padding: 0 0 5px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.cartao-pokemon .cartao-informacoes .habilidades {
+  padding: 0 10px;
+  width: 180px;
+}
+
+.cartao-pokemon .cartao-informacoes .habilidades ul li {
+  border-bottom: 1px solid #c3c4c5;
+  padding: 0 0 5px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  66% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  66% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.listagem {
+  max-width: 200px;
+}
+
+.listagem .pokemon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 10px;
+  color: #ffffff;
+  background-color: #6B727A;
+  padding: 0 5px;
+  cursor: pointer;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  min-height: 70px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+
+.listagem .pokemon.ativo {
+  background-color: #FA6668;
+}
+
+.listagem .pokemon:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.listagem .pokemon img {
+  width: 25%;
+  border-radius: 50%;
+}
+
+.listagem .pokemon span {
+  padding-right: 20px;
+}
+
+@media (max-width: 750px) {
+  body {
+    font-size: 12px;
+  }
+  .pokedex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px 0;
+  }
+  .pokedex .cartao-pokemon {
+    max-width: 300px;
+  }
+  .pokedex .cartao-pokemon .cartao-imagem {
+    width: 200px;
+    height: 200px;
+  }
+  .pokedex .cartao-pokemon .cartao-informacoes {
+    padding: 60px 30px 30px;
+    margin-top: -50px;
+  }
+  .pokedex .cartao-pokemon .cartao-informacoes h3 {
+    font-size: 16px;
+  }
+  .pokedex .cartao-pokemon .cartao-informacoes.informação {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
+  }
+  .listagem {
+    max-width: 300px;
+  }
+  .listagem ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 8px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .listagem ul .pokemon {
+    width: 140px;
+    border-radius: 10px;
+    margin-bottom: 0;
+  }
+  .listagem ul .pokemon span {
+    padding-right: 5px;
+  }
+}
+
+.aberto {
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */

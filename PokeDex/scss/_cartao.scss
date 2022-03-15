@@ -1,0 +1,109 @@
+.cartao-pokemon{
+    display: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0;
+    &.tipo-eletrico{
+        background-color: #FCC719;
+    }
+    &.tipo-fogo{
+        background-color:#ED8A8B;
+    }
+    &.tipo-agua{
+        background-color: #76befe;
+    }
+    &.tipo-grama{
+        background-color: #49d0b0;
+    }
+    &.tipo-trevas{
+        background-color: #ba68c8;
+    }
+    &.tipo-dragao{
+        background-color: #c29791;
+    }
+    .cartao-topo{
+        padding: 30px 40px 0;
+
+        .nome{
+            margin-bottom: 5px;
+        }
+        .tipo{
+            font-size: 12px; 
+            background-color: #FFFFFF;
+            opacity: 0.7;
+            border-radius: 10px;
+            padding: 3px 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0;
+        }    
+        .detalhes{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #FFFFFF;
+        }
+
+        .cartao-imagem{
+            width: 350px;
+            height: 350px;
+            img{
+                animation: floating 3s infinite;
+                max-height: 100%;
+            }
+        }
+     }
+        .cartao-informacoes{
+        display: flex;
+        justify-content: space-between;
+        background-color: #FFFFFF;
+        padding: 80px 30px 50px;
+        margin-top: -70px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        h3{
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #6b727a;
+        }
+        .status{
+            padding: 0 10px;
+            width: 180px;
+            ul{
+                li{
+                    border-bottom: 1px solid #c3c4c5;
+                    padding: 0 0 5px;
+                    margin-bottom:5px;
+                    font-size: 15px;
+                }
+            }
+        }
+        .habilidades{
+            padding: 0 10px;
+            width: 180px;
+            ul{
+                li{
+                    border-bottom: 1px solid #c3c4c5;
+                    padding: 0 0 5px;
+                    margin-bottom:5px;
+                    font-size: 15px;
+                }
+            }
+        }
+        
+        }
+
+}
+
+
+@keyframes floating {
+    0% {
+      
+              transform: translateY(0);
+    }
+    66% {
+        transform: translateY(-30px);
+}
+    100% {
+              transform: translateY(0);
+    }
+  }
+    
+  
+  
